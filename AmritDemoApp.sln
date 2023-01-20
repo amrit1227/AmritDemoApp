@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmritDemoApp", "AmritDemoApp\AmritDemoApp.csproj", "{7BFD53C3-4D76-4242-A142-7DAC05B5AACF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BFD53C3-4D76-4242-A142-7DAC05B5AACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFD53C3-4D76-4242-A142-7DAC05B5AACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFD53C3-4D76-4242-A142-7DAC05B5AACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFD53C3-4D76-4242-A142-7DAC05B5AACF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA72AF66-2483-4C96-8575-46A0714A6D2D}
+	EndGlobalSection
+EndGlobal
