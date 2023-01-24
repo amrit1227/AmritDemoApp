@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
+RUN echo $(ls -a) 
 WORKDIR /app
+RUN echo $(ls -a) 
 
 # Copy csproj and restore as distinct layers
 COPY *.csproj ./
