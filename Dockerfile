@@ -1,14 +1,16 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
 RUN echo $(ls -a) 
 WORKDIR /app
-RUN echo $(ls -a) 
+
 
 # Copy csproj and restore as distinct layers
-COPY *.csproj ./
+COPY ./AmritDemoApp/*.csproj ./
+RUN echo $(ls -a) 
 RUN dotnet restore
 
 # Copy everything else and build
 COPY . ./
+RUN echo $(ls -a) 
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
