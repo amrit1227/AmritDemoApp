@@ -9,7 +9,7 @@ RUN echo $(ls -a)
 RUN dotnet restore
 
 # Copy everything else and build
-COPY . ./
+COPY ./AmritDemoApp/ ./
 RUN echo $(ls -a) 
 RUN dotnet publish -c Release -o out
 
