@@ -2,16 +2,16 @@ name: MakeCon
 "on":
     push:
         branches:
-            - master
+            - aks-devhub-wvqgk
     workflow_dispatch: {}
 env:
     ACR_RESOURCE_GROUP: amritbrar_group
-    AZURE_CONTAINER_REGISTRY: acrworkflow1675095506617
+    AZURE_CONTAINER_REGISTRY: acrworkflow1675095976876
     CLUSTER_NAME: AmritClusterKub
     CLUSTER_RESOURCE_GROUP: amritbrar_group
-    CONTAINER_NAME: image-workflow-1675095506617
+    CONTAINER_NAME: image-workflow-1675095976876
     DEPLOYMENT_MANIFEST_PATH: |
-        ./Dockerfile
+        ./d.yaml
 jobs:
     buildImage:
         permissions:
@@ -55,4 +55,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1675095506617
+                namespace: namespace-workflow-1675095976876
