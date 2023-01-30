@@ -1,0 +1,44 @@
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: brarhemo
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: brarhemo
+    template:
+      metadata:
+        labels:
+          app: brarhemo
+      spec:
+        nodeSelector:
+          beta.kubernetes.io/os: linux
+        containers:
+          - name: brarhemo
+            image: amritconatinerregistry.azurecr.io/bahghhumara/amritdemo:latest
+            env:
+              - name: ALLOW_EMPTY_PASSWORD
+                value: 'yes'
+            resources:
+              requests:
+                cpu: 100m
+                memory: 128Mi
+              limits:
+                cpu: 250m
+                memory: 256Mi
+            ports:
+              - containerPort: 5000
+                name: redis
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: brarhemo
+  spec:
+    type: LoadBalancer
+    selector:
+      app: brarhemo
+    ports:
+      - port: 80
+        targetPort: 5000
+    
